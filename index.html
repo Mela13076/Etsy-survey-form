@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+        <header class="header">
+            <h1 class="title" id="title">After Purchese Product Survey</h1>
+            <p class="thanks" id="thanks">Thank You for Your Purchase on my Etsy RetroGraphicShop</p>
+            <p class="description" id="description">Complete the survery about your experience on purchased product.</p>
+        </header>
+    <div class="container">
+        <form id="survey-form">
+
+            <div class="group">
+                <label for="name" id="name-label">Full Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="input"
+                    placeholder="Enter your full name"
+                    required
+                />
+            </div>
+
+            
+            <div class="group">
+                <label id="email-label" for="email">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="input"
+                    placeholder="Enter your email"
+                    required
+                />
+            </div>
+
+            <div class="group">
+                <label id="age-label" for="age">Age</label>
+                <input
+                    type="number"
+                    name="age"
+                    id="number"
+                    min="18"
+                    max="100"
+                    class="input"
+                    placeholder="Enter your age"
+                    required
+                />
+            </div>
+
+            <div class="group">
+                <p>How would you rate your experience of ordering on our site?</p>
+                <label>
+                    <input
+                        name="experience"
+                        value="extremly-good"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                    />Extremly Good</label>
+                <label>
+                    <input
+                        name="experience"
+                        value="good"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                    />Good</label>
+                <label>
+                    <input
+                        name="experience"
+                        value="okay"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                    />Okay</label>
+                <label>
+                    <input
+                        name="experience"
+                        value="Disappointed"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                    />Disappointed</label>
+            </div>
+
+            <div class="group">
+                <p>What products did you purchase? <span class="parth">(Check all that apply</span></p>
+                <label>
+                    <input
+                        name="purchased"
+                        value="shirt"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />T-shirt
+                </label>
+                <label>
+                    <input
+                        name="purchased"
+                        value="hoodie"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Hoodie
+                </label>
+                <label>
+                    <input
+                        name="purchased"
+                        value="hat"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Hat
+                </label>
+                <label>
+                    <input
+                        name="purchased"
+                        value="sticker"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Stickers
+                </label>
+                <label>
+                    <input
+                        name="purchased"
+                        value="cup"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Mugs or Tumblers
+                </label>
+                <label>
+                    <input
+                        name="purchased"
+                        value="accessiores"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Accessiores
+                </label>
+                <label>
+                    <input
+                        name="purchased"
+                        value="other"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Others
+                </label>
+            </div>
+            <div class="group">
+                <p>On a scale of 1-10, how would you rate your product? <span class="parth">(0=terrible, 10=excellent)</span></p>
+                <select id="dropdown" name="scale" class="input" required>
+                    <option disabled selected value>Select your rating</option>
+                    <option value="10">10</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div class="group">
+                <p>If you wish to change one thing about our product, what would it be?</p>
+                <textarea
+                    id="comments"
+                    class="input-textarea"
+                    name="comment"
+                    placeholder="Enter your comment here">
+                </textarea>
+            </div>
+            <div class="group">
+                <button type="submit" id="submit" class="submit-button">
+                Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!--User stories needed-->
+<!--
+    You should have a page title in an h1 element with an id of title
+    You should have a short explanation in a p element with an id of description
+    You should have a form element with an id of survey-form
+    Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
+    Inside the form element, you are required to enter your email in an input field that has an id of email
+    If you enter an email that is not formatted correctly, you will see an HTML5 validation error
+    Inside the form, you can enter a number in an input field that has an id of number
+    If you enter non-numbers in the number input, you will see an HTML5 validation error
+    If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
+    For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
+    For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field
+    Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute
+    Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
+    Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from
+    Inside the form element, you are presented with a textarea for additional comments
+Inside the form element, you are presented with a button with id of submit to submit all the inputs-->
+
+
+
+<!--Question to ask -->
+<!--
+    Name
+    email 
+    age 
+    Radio: How would you rate your experience of ordering on out site? 👀 – Disappointed, Okayish, Good, Extremely good.
+    Checkbok: what products did you purchase? chek T-shirt, Hoodie, Hat, Stickers, Pillow Case, Mugs, accessiores, other
+dorpdown: On a scale of 1-10, how would you rate your product? (0=terrible, 10+excellent)
+additional comments: If you wish to change one thing about our product, what would it be? 😇
+submit: submit button
+-->
